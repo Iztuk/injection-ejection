@@ -3,20 +3,33 @@ A demo app that showcases how SQL Injection vulnerabilities are introduced and h
 
 ---
 
-## Scenario
+## Scenario: The Curious Manager at Injec Corp
 
-This project simulates a vulnerable internal employee portal for a company called **Injec Corp**.
+This project simulates a vulnerable internal employee portal for a fictional company called **Injec Corp**, where managers use a simple search form to look up employee records by name.
 
-The app inclueds a search feature that was originally implemented without input sanitization, allowing attackers to perform SQL Injection attacks (e.g., `', OR 1=1--` or even `Robert'); DROP TABLE Employees;--`).
+The search functionality was implemented quickly — and carelessly — using raw SQL queries with direct string interpolation. This allowed attackers to craft malicious input that could:
 
-The goal of this project is to demonstrate:
-1. How SQL injection works through hands-on exploitation.
-2. How to mitigate it using prepared statements and input sanitization/validation.
-3. The importance of secure coding practices in real-world applications.
+- Return **all employee records** regardless of search filters (`' OR 1=1--`)
+- Cause **unexpected behavior or errors**
+- In some cases, even execute **destructive queries** (e.g., `Robert'); DROP TABLE Employees;--`)
+
+---
+
+## Objectives
+
+This project demonstrates:
+1. **How SQL injection vulnerabilities occur** in real-world code.
+2. **How to safely mitigate them** using parameterized queries and input validation.
+2. The critical role of **secure coding practices** in preventing injection attacks - one of the [OWASP Top 10](https://owasp.org/Top10/A03_2021-Injection/)
 
 ---
 
 ## Features
-- Landing page
-- Employee search by name (vulnerable to injection)
-- Toggle between `/vulnerable` and `/secure` endpoints
+- Employee search form
+- Vulnerable endpoints: `/vulnerable`
+- Secure endpoints: `/secure`
+- Sample SQL queries and inputs to demonstrate injection vectors
+
+---
+
+> *This project focuses solely on SQL Injection vulnearbilites, from exploitation to defense, as a hands-on learning and demonstration tool for secure software engineering.*

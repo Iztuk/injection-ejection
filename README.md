@@ -32,4 +32,4 @@ This project demonstrates:
 
 ---
 
-> *This project focuses solely on SQL Injection vulnearbilites, from exploitation to defense, as a hands-on learning and demonstration tool for secure software engineering. If there are any suggestions, please leave contact me through my email on my GitHub profile!*
+> *This project focuses solely on SQL Injection vulnearbilites, from exploitation to defense, as a hands-on learning and demonstration tool for secure software engineering. If there are any suggestions, please contact me through my email on my GitHub profile!*
